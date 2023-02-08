@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Inspection</title>
+  <style>
+    body {
+      background-color: aliceblue;
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+
+    h1 {
+      color: royalblue;
+      font-size: 3rem;
+      font-family: 'Times New Roman', sans-serif;
+    }
+
+    p {
+      font-size: 1rem;
+      font-weight: normal;
+    }
+
+    h2 {
+      font-weight: 500;
+    }
+
+    .quiz {
+      margin: 20px;
+      text-align: left;
+    }
+
+    .question {
+      font-size: 18px;
+      font-weight: normal;
+      text-align: left;
+      margin: 20px;
+    }
+
+    .answer {
+      font-size: 16px;
+      font-weight: normal;
+      text-align: left;
+      margin: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Inspect Me</h1>
+  <h2>This is an simple website to learn how to do CSS Inspection</h2>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+    viverra euismod odio, gravida pellentesque urna varius vitae.
+    Suspendisse potenti. Morbi commodo, ipsum in blandit hendrerit,
+    velit enim ornare nisi, eget consequat libero libero eu libero.
+    Donec varius, sem eget ornare commodo, quam libero pretium
+    libero, euismod blandit mauris nunc in magna.
+  </p>
+  <hr />
+  <div class="quiz">
+    <div class="question">
+      Q.1 What is the named color of the body?
+    </div>
+    <div class="answer">
+      <input type="text" id="answer1">
+      <button onclick="checkAnswer1()">Submit</button>
+      <p id="result1"></p>
+    </div>
+    <div class="question">
+      Q.2 What is the font size of the h1?
+    </div>
+    <div class="answer">
+      <input type="text" id="answer2">
+      <button onclick="checkAnswer2()">Submit</button>
+      <p id="result2"></p>
+    </div>
+    <div class="question">
+      What is the font weight of the h2?
+    </div>
+    <div class="answer">
+      <input type="text" id="answer3">
+      <button onclick="checkAnswer3()">Submit</button>
+      <p id="result3"></p>
+    </div>
+    <div class="question">
+      What is the font family of the p?
+    </div>
+    <div class="answer">
+      <input type="text" id="answer4">
+      <button onclick="checkAnswer4()">Submit</button>
+      <p id="result4"></p>
+    </div>
+  </div>
+</body>
+<script>
+  function checkAnswer1() {
+    var answer = document.getElementById("answer1").value;
+    if (answer.toLowerCase() === "aliceblue" || answer.toLowerCase() === "alice blue") {
+      document.getElementById("result1").innerHTML = "Correct!";
+    } else {
+      document.getElementById("result1").innerHTML = "Incorrect. Try again.";
+    }
+  }
+  function checkAnswer2() {
+    var answer = document.getElementById("answer2").value;
+    if (answer.toLowerCase() === "3rem" || answer.toLowerCase() === "3 rem") {
+      document.getElementById("result2").innerHTML = "Correct!";
+    } else {
+      document.getElementById("result2").innerHTML = "Incorrect. Try again.";
+    }
+  }
+  function checkAnswer3() {
+    var answer = document.getElementById("answer3").value;
+    if (answer.toLowerCase() === "500") {
+      document.getElementById("result3").innerHTML = "Correct!";
+    } else {
+      document.getElementById("result3").innerHTML = "Incorrect. Try again.";
+    }
+  }
+  function checkAnswer4() {
+    var answer = document.getElementById("answer4").value;
+    if (answer.toLowerCase() === "ariel" || answer.toLowerCase() === "ariel, sans-serif" || answer.toLowerCase() === "sans-serif" || answer.toLowerCase() === "sans serif") {
+      document.getElementById("result4").innerHTML = "Correct!";
+    } else {
+      document.getElementById("result4").innerHTML = "Incorrect. Try again.";
+    }
+  }
+</script>
+
+</html>
